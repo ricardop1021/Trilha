@@ -56,12 +56,23 @@ namespace OrganizaTrilha
                                 InserirPalestrasSeq(ref tempocalculado, palestras, almoco, network, ref tp_final, ref tp_inicio, palestrasOrdenadas, i);
 
                             }
+                            if (tempocalculado >= 450)
+                            {
+                                for (int j = 0; j < palestras.Count; j++)
+                                {
+                                    if (palestras[i].Alocada == false)
+                                    {
+
+                                        InserirPalestrasSeq(ref tempocalculado, palestras, almoco, network, ref tp_final, ref tp_inicio, palestrasOrdenadas, i);
+                                    }
+                                }
+                            }
 
                         }
                     }
 
                 }
-
+                tp_final = new TimeSpan(17, 0, 0);
                 palestrasOrdenadas.Add(new Palestras(0, network, tp_final));
                 tp_final = new TimeSpan(9, 0, 0);
                 tempocalculado = 0;
