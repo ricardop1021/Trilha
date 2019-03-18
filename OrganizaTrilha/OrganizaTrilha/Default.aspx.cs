@@ -46,59 +46,20 @@ namespace OrganizaTrilha
                         {
                             if ((tempocalculado == 135) && (palestras[i].Tempo == 45) || (tempocalculado == 135) && (palestras[i].Tempo != 60) || (tempocalculado != 135))
                             {
-                                /*Esta condição se o nome da palestra for diferente de almoço ou workshop ele insere os itens na lista sequencialmente*/
-                                if ((palestras[i].Nome != almoco) && (palestras[i].Nome != network))
+                                /*metodo para encontrar o horario de almoço: se horario for igual a 12:00 ou 15 miutos antes, 
+                                    * insere na lista o horario para almoço*/
+                                if ((tempocalculado == 180) || (tempocalculado == 165))
                                 {
-                                    /*metodo para encontrar o horario de almoço: se horario for igual a 12:00 ou 15 miutos antes, 
-                                     * insere na lista o horario para almoço*/
-                                    if ((tempocalculado == 180) || (tempocalculado == 165))
-                                    {
-                                        ExibirAlmoco(ref tempocalculado, palestras, almoco, palestrasOrdenadas, ref tp_final);
-                                    }
-
-                                    palestras[i].Hr_inicio = tp_final;
-                                    palestrasOrdenadas.Add(palestras[i]);
-                                    palestras[i].Alocada = true;
-                                    tempocalculado += palestras[i].Tempo;
-                                    if (palestras[i].Nome != almoco)
-                                    {
-                                        tp_inicio = new TimeSpan(0, palestras[i].Tempo, 0);
-                                        tp_final += tp_inicio;
-                                    }
+                                    ExibirAlmoco(ref tempocalculado, palestras, almoco, palestrasOrdenadas, ref tp_final);
                                 }
 
+                                InserirPalestrasSeq(ref tempocalculado, palestras, almoco, network, ref tp_final, ref tp_inicio, palestrasOrdenadas, i);
+
                             }
 
                         }
                     }
 
-
-
-                    /*For para rodar após horario de almoço até horário de network*/
-                    for (int i = 0; i < palestras.Count; i++)
-                    {
-
-                        if ((tempocalculado <= tempotrilha - 1) && (palestras[i].Alocada == false))
-                        {
-
-                            if ((palestras[i].Nome != almoco) && (palestras[i].Nome != network))
-                            {
-                                palestras[i].Hr_inicio = tp_final;
-                                palestrasOrdenadas.Add(palestras[i]);
-                                palestras[i].Alocada = true;
-                                tempocalculado += palestras[i].Tempo;
-                            }
-                            if (palestras[i].Nome != almoco)
-                            {
-                                tp_inicio = new TimeSpan(0, palestras[i].Tempo, 0);
-                                tp_final += tp_inicio;
-                            }
-
-
-
-                        }
-
-                    }
                 }
 
                 palestrasOrdenadas.Add(new Palestras(0, network, tp_final));
@@ -117,6 +78,25 @@ namespace OrganizaTrilha
 
 
 
+        }
+
+        private static void InserirPalestrasSeq(ref int tempocalculado, List<Palestras> palestras, string almoco, string network, ref TimeSpan tp_final, ref TimeSpan tp_inicio, List<Palestras> palestrasOrdenadas, int i)
+        {
+            /*Esta condição se o nome da palestra for diferente de almoço ou workshop ele insere os itens na lista sequencialmente*/
+            if ((palestras[i].Nome != almoco) && (palestras[i].Nome != network))
+            {
+
+
+                palestras[i].Hr_inicio = tp_final;
+                palestrasOrdenadas.Add(palestras[i]);
+                palestras[i].Alocada = true;
+                tempocalculado += palestras[i].Tempo;
+                if (palestras[i].Nome != almoco)
+                {
+                    tp_inicio = new TimeSpan(0, palestras[i].Tempo, 0);
+                    tp_final += tp_inicio;
+                }
+            }
         }
 
         private static void InserirItens(List<Palestras> palestras, string almoco, string network, TimeSpan temp)
