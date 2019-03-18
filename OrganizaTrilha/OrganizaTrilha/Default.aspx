@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron" style="text-align:center">
+    <div class="jumbotron" style="text-align:center" >
         <h2>Ricardo Pereira de Fátima</h2>
         <p class="lead">Teste back-end C#</p>
         <p> Telefone: (31)9859-1441</p>
@@ -11,7 +11,7 @@
     
     <div class="row">
        
-        <asp:GridView ID="GVtrilhas" runat="server" AutoGenerateColumns="false" CellPadding="3" ForeColor="#333333" GridLines="None" horizontalalign="Center" Width="650px" >
+        <asp:GridView ID="GVtrilhas" runat="server" AutoGenerateColumns="false" CellPadding="3" ForeColor="#333333" GridLines="None" horizontalalign="Center" Width="100%" >
 
             <AlternatingRowStyle BackColor="White"></AlternatingRowStyle>
             <Columns>
