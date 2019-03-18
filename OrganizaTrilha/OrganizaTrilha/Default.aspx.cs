@@ -56,7 +56,7 @@ namespace OrganizaTrilha
                                 InserirPalestrasSeq(ref tempocalculado, palestras, almoco, network, ref tp_final, ref tp_inicio, palestrasOrdenadas, i);
 
                             }
-                            if (tempocalculado >= 450)
+                            if ((tempocalculado >= 450)&&(palestras[i].Tempo<=30))
                             {
                                 for (int j = 0; j < palestras.Count; j++)
                                 {
