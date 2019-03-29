@@ -1,0 +1,19 @@
+Escrevendo testes rápidos-60
+Uma visão sobre Python-45
+Angular-30
+Otimizando aplicações com o NodeJS-45
+Erros comuns no desenvolvimento de software-45
+Rails para Desenvolvedores Python-60
+ASP.net MVC-60
+TDD na prática-45
+Woah-30
+Sente e escreva-30
+Pair Programming vs Noise-45
+Mobilidade em desenvolvimento-60
+Ruby on Rails: Por que devemos migrar para ele?-60
+Otimizando aplicações .NET-45
+Java e os novos paradigmas de programação-30
+Rubi vs. Clojure para Back-End-30
+Scrum para leigos-60
+Um mundo sem stackoverflow-30
+UX-30min

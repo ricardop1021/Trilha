@@ -163,11 +163,6 @@ C:\WORKSPACE\Trilha\OrganizaTrilha\OrganizaTrilha\bin\Microsoft.CodeDom.Provider
 C:\WORKSPACE\Trilha\OrganizaTrilha\OrganizaTrilha\bin\Microsoft.ScriptManager.MSAjax.dll
 C:\WORKSPACE\Trilha\OrganizaTrilha\OrganizaTrilha\bin\Microsoft.ScriptManager.WebForms.dll
 C:\WORKSPACE\Trilha\OrganizaTrilha\OrganizaTrilha\bin\Microsoft.Web.Infrastructure.dll
-C:\WORKSPACE\Trilha\OrganizaTrilha\OrganizaTrilha\bin\MySql.Data.dll
-C:\WORKSPACE\Trilha\OrganizaTrilha\OrganizaTrilha\bin\MySql.Data.EntityFramework.dll
-C:\WORKSPACE\Trilha\OrganizaTrilha\OrganizaTrilha\bin\MySQL.Data.EntityFrameworkCore.Design.dll
-C:\WORKSPACE\Trilha\OrganizaTrilha\OrganizaTrilha\bin\MySQL.Data.EntityFrameworkCore.dll
-C:\WORKSPACE\Trilha\OrganizaTrilha\OrganizaTrilha\bin\MySql.Web.dll
 C:\WORKSPACE\Trilha\OrganizaTrilha\OrganizaTrilha\bin\Newtonsoft.Json.dll
 C:\WORKSPACE\Trilha\OrganizaTrilha\OrganizaTrilha\bin\System.Diagnostics.DiagnosticSource.dll
 C:\WORKSPACE\Trilha\OrganizaTrilha\OrganizaTrilha\bin\System.Web.Helpers.dll
